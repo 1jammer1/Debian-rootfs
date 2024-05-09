@@ -12,7 +12,7 @@ deb http://deb.debian.org/debian stable-updates main contrib non-free non-free-f
 deb-src http://deb.debian.org/debian stable-updates main contrib non-free non-free-firmware" >> rootfs/etc/apt/sources.list
 chroot rootfs apt update
 chroot rootfs apt upgrade -y
-rm -rf rootfs/etc/apt/sources.list
+rm -rf rootfs/etc/hostname
 touch rootfs/etc/hostname
 echo "Batarong" > rootfs/etc/hostname
 chroot rootfs apt install -y network-manager
